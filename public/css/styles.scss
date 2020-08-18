@@ -1,0 +1,91 @@
+$wallet-color: #ffa659;
+
+body,
+html {
+  height: 100%;
+  display: grid;
+  font-size: 1rem;
+}
+
+.wallet {
+  margin: auto;
+  border: solid 8px darken($wallet-color, 20);
+  background-color: #ffa659;
+  height: 60%;
+  width: 80%;
+  border-radius: 25px;
+  overflow: hidden;
+
+  .cards {
+    height: 30%;
+  }
+
+  .card {
+    position: relative;
+    border-top: solid 4px darken($wallet-color, 20);
+    border-left: solid 4px darken($wallet-color, 20);
+    border-right: solid 4px darken($wallet-color, 20);
+    background-color: #ffa659;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin: -4px;
+    height: 30%;
+  }
+
+  .circle {
+    width: 100px;
+    height: 50px; /* as the half of the width */
+    background-color: $wallet-color;
+    border-bottom-left-radius: 110px; /* 100px of height + 10px of border */
+    border-bottom-right-radius: 110px; /* 100px of height + 10px of border */
+    border: solid 4px darken($wallet-color, 20);
+    border-top: 0;
+    position: absolute;
+    top: -4px;
+    left: calc(50% - 58px);
+  }
+
+  .wallet-interface {
+    position: relative;
+    border-top: solid 4px darken($wallet-color, 20);
+    border-left: solid 4px darken($wallet-color, 20);
+    border-right: solid 4px darken($wallet-color, 20);
+    padding: 50px 15px 15px 15px;
+    margin: -8px;
+    background-color: #ffa659;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    height: 100%;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+button {
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: outset 4px burlywood;
+  background-color: burlywood;
+  outline: none;
+  color: white;
+
+  &:active {
+    border-style: inset;
+  }
+}
+
+.input-address {
+  width: 70%;
+  padding: 10px;
+  border-radius: 8px;
+  border: solid 1px burlywood;
+  outline: none;
+  font-size: 1.1rem;
+}
